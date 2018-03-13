@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://huang.cs.ntust.edu.tw/plans -->
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width; initial-scale=1.0">
+      <title>Seml</title>
+      <meta name="csrf-param" content="authenticity_token">
+      <meta name="csrf-token" content="QzkU2pYS2f2GqW1w0egoWwx6imEvlSzXVlgJrMYfGTPbM+S9FYgyoVgkUy3uslo207O9Q4ickH3As7P3kWft9g==">
+      <link rel="stylesheet" media="all" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+      <script async="" src="../js/analytics.js"></script>
+      <script>
+          (function(i, s, o, g, r, a, m) {
+              i['GoogleAnalyticsObject'] = r;
+              i[r] = i[r] || function() {
+                  (i[r].q = i[r].q || []).push(arguments)
+              }, i[r].l = 1 * new Date();
+              a = s.createElement(o),
+                  m = s.getElementsByTagName(o)[0];
+              a.async = 1;
+              a.src = g;
+              m.parentNode.insertBefore(a, m)
+          })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+          ga('create', 'UA-94092660-1', 'auto');
+          ga('send', 'pageview');
+  
+      </script>
+      <script type="text/javascript" src="../js/vue.min.js"></script>
+      <script type="text/javascript" src="../js/jquery.js"></script>
+      <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+
+  </head>
+  
+  <body>
+      <!--header每個頁面都一樣-->
+        <div class="main-header">
+            <div class="container">
+                <div class="col-sm-4 col-md-6 vertical-container">
+                    <img class="logo-ntust" src="../img/logo.png" alt="Logo">
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-6 logo-main">
+                    <div class="content">
+                        <h4>臺灣科技大學 ｜ 資訊管理系</h4>
+                        <h4>軟體工程與管理研究中心</h4>
+                        <h5>Software Engineering and Management Research Center</h5>
+                    </div>
+                </div>
+            </div>
+        <div class="nav-list container">
+            <nav id="custom-bootstrap-menu" class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="./plans.html">SEML</a>
+                    </div>
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar navbar-nav navbar-right">
+                            <li>
+                                <a href="./profile.html">基本資料</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="./plans.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">研究
+                                <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="./researchscope.html">研究領域</a>
+                                    </li>
+                                <li>
+                                    <a href="./plans.html">研究計畫</a>
+                                </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./students.html">指導</a>
+                            </li>
+                            <li>
+                                <a href="./seml.html">課程</a>
+                            </li>
+                        </ul>
+                    </div>
+                      <!-- /.navbar-collapse -->
+                  </div>
+                  <!-- /.container-fluid -->
+              </nav>
+          </div>
+        </div>
+  
+    
+ <div class="container section plan"  id="studentList">
+      <div class="row">
+    <div class="col-md-12 title-details">
+      <div class="details-title">
+        <h3><span>指導學生</span></h3>
+      </div>
+    </div>
+  </div>
+  <div class="list">
+    <ul class="nav nav-tabs">
+      <li class="rounded active">
+        <a data-toggle="tab" href="/students#tab-student-dr">
+          <i class="fa fa-user"></i>
+          博班</a>
+      </li>
+
+      <li class="rounded ">
+        <a data-toggle="tab" href="/students#tab-student-emba">
+          <i class="fa fa-user"></i>
+          EMBA</a>
+      </li>
+      <li class="rounded ">
+        <a data-toggle="tab" href="/students#tab-student-graduate">
+          <i class="fa fa-user"></i>
+          碩士班</a>
+      </li>
+      <li class="rounded ">
+        <a data-toggle="tab" href="/students#tab-student-undergraduate">
+          <i class="fa fa-user"></i>
+          專題生</a>
+      </li>
+    </ul>
+    <!--尚未碩士 內容-->
+    <div class="tab-content" style="padding-top:15px;">
+        <div id="tab-student-graduate" class="tab-pane  ">
+          <div class="full-height-scroll">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+        	    <th>級別</th>
+                    <th>姓名</th>
+                    <th>研究主題</th>
+                    <th>聯絡方式</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="student in students" v-if="student.s_type==4 && student.status==0 ">
+                      <td>{{student.degree}}</td>
+                      <td>{{student.name}}</td>
+                      <td>{{student.stati}}</td>
+                      <td>  <i class="fa fa-envelope"></i>{{student.email}}</td>
+                    </tr>
+        
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!--尚未畢業博班 內容-->
+        <div id="tab-student-dr" class="tab-pane active ">
+          <div class="full-height-scroll">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+        	    <th>級別</th>
+                    <th>姓名</th>
+                    <th>研究主題</th>
+                    <th>聯絡方式</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="student in students" v-if="student.s_type==0 && student.status==0 ">
+                      <td></td>
+                      <td>{{student.name}}</td>
+                      <td>{{student.research_topic}}</td>
+                      <td>  <i class="fa fa-envelope"></i>{{student.email}}</td>
+                    </tr>
+                  
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+         <!--尚未畢業EMBA 內容-->
+        <div id="tab-student-emba" class="tab-pane ">
+          <div class="full-height-scroll">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+        	    <th>級別</th>
+                    <th>姓名</th>
+                    <th>研究主題</th>
+                    <th>聯絡方式</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="student in students" v-if="student.s_type==2 && student.status==0 ">
+                      <td>{{student.degree}}</td>
+                      <td>{{student.name}}</td>
+                      <td>{{student.research_topic}}</td>
+                      <td>  <i class="fa fa-envelope"></i> </td>
+                    </tr>
+               
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+    <div class="row">
+        <div class="col-md-12 title-details">
+          <div class="details-title">
+            <h3><span>畢業學生</span></h3>
+          </div>
+        </div>
+      </div>
+      <div class="list">
+        <ul class="nav nav-tabs">
+          <li class="rounded active">
+            <a data-toggle="tab" href="/students#tab-alumni-dr">
+              <i class="fa fa-user"></i>
+              博班</a>
+          </li>
+          <li class="rounded ">
+            <a data-toggle="tab" href="/students#tab-alumni-emba">
+              <i class="fa fa-user"></i>
+              EMBA</a>
+          </li>
+          <li class="rounded ">
+            <a data-toggle="tab" href="/students#tab-alumni-graduate">
+              <i class="fa fa-user"></i>
+              碩士班</a>
+          </li>
+          <li class="rounded ">
+            <a data-toggle="tab" href="/students#tab-alumni-undergraduate">
+              <i class="fa fa-user"></i>
+              專題生</a>
+          </li>
+        </ul>
+        
+        <!--畢業EMBA 內容-->
+        <div class="tab-content" style="padding-top:15px;">
+            <div id="tab-alumni-emba" class="tab-pane  ">
+              <div class="full-height-scroll">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th>畢業編號</th>
+            	        <th>畢業年度</th>
+                        <th>姓名</th>
+                        <th>研究主題</th>
+                        <th>聯絡方式</th>
+    
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="student in students" v-if="student.s_type==2 && student.status==1 ">
+                          <td>{{student.graduated_num}}</td>
+                          <td>{{student.degree}}</td>
+                          <td>{{student.name}}</td>
+                          <td>{{student.research_topic}}</td>
+                          <td>  <i class="fa fa-envelope"></i> </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+            <!--畢業碩士 內容-->
+            <div id="tab-alumni-graduate" class="tab-pane  ">
+              <div class="full-height-scroll">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th>畢業編號</th>
+            	        <th>畢業年度</th>
+                        <th>姓名</th>
+                        <th>研究主題</th>
+                        <th>聯絡方式</th>
+    
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="student in students" v-if="student.s_type==4 && student.status==1 ">
+                          <td>{{student.graduated_num}}</td>
+                          <td>{{student.degree}}</td>
+                          <td>{{student.name}}</td>
+                          <td>{{student.research_topic}}</td>
+                          <td>  <i class="fa fa-envelope"></i> </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+            <!--畢業博士 內容-->
+            <div id="tab-alumni-dr" class="tab-pane active ">
+              <div class="full-height-scroll">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th>畢業編號</th>
+            	        <th>畢業年度</th>
+                        <th>姓名</th>
+                        <th>研究主題</th>
+                        <th>聯絡方式</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="student in students" v-if="student.s_type==0 && student.status==1 ">
+                          <td>{{student.graduated_num}}</td>
+                          <td>{{student.degree}}</td>
+                          <td>{{student.name}}</td>
+                          <td>{{student.research_topic}}</td>
+                          <td>  <i class="fa fa-envelope"></i> </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+    
+    
+    
+    
+    
+        <div class="footer ">
+          <div class="container section">
+             ©Copyright 2018 Software Engineering and Management Research Center 軟體工程與管理研究中心,all rights reserved.
+             <div class="text-right">
+                <a href="/sign_in">登入</a>
+             </div>
+    
+          </div>
+        </div>
+        
+        
+    
+    </body>
+
+    <script type="text/javascript">
+        new Vue({
+        
+          el: '#studentList',
+        
+          data: {
+            currentBranch: 'dev',
+            students: null
+          },
+        
+          created: function () {
+            this.fetchData();
+          },
+        
+          methods: {
+            fetchData: function () {
+                var self = this;
+                $.getJSON("/getStudents", function(result){
+                  console.log(result);
+                  self.students= result;
+                });
+            },
+        
+          }
+        });
+    
+    </script>
+
+
+
+
+</html>

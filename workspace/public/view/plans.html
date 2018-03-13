@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://huang.cs.ntust.edu.tw/plans -->
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width; initial-scale=1.0">
+      <title>Seml</title>
+      <meta name="csrf-param" content="authenticity_token">
+      <meta name="csrf-token" content="QzkU2pYS2f2GqW1w0egoWwx6imEvlSzXVlgJrMYfGTPbM+S9FYgyoVgkUy3uslo207O9Q4ickH3As7P3kWft9g==">
+      <link rel="stylesheet" media="all" href="../css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+      <script async="" src="../js/analytics.js"></script>
+      <script>
+          (function(i, s, o, g, r, a, m) {
+              i['GoogleAnalyticsObject'] = r;
+              i[r] = i[r] || function() {
+                  (i[r].q = i[r].q || []).push(arguments)
+              }, i[r].l = 1 * new Date();
+              a = s.createElement(o),
+                  m = s.getElementsByTagName(o)[0];
+              a.async = 1;
+              a.src = g;
+              m.parentNode.insertBefore(a, m)
+          })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+          ga('create', 'UA-94092660-1', 'auto');
+          ga('send', 'pageview');
+  
+      </script>
+      <script type="text/javascript" src="../js/vue.min.js"></script>
+      <script type="text/javascript" src="../js/jquery.js"></script>
+      <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+
+  </head>
+  
+  <body>
+      <!--header每個頁面都一樣-->
+        <div class="main-header">
+            <div class="container">
+                <div class="col-sm-4 col-md-6 vertical-container">
+                    <img class="logo-ntust" src="../img/logo.png" alt="Logo">
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-6 logo-main">
+                    <div class="content">
+                        <h4>臺灣科技大學 ｜ 資訊管理系</h4>
+                        <h4>軟體工程與管理研究中心</h4>
+                        <h5>Software Engineering and Management Research Center</h5>
+                    </div>
+                </div>
+            </div>
+        <div class="nav-list container">
+            <nav id="custom-bootstrap-menu" class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="./plans.html">SEML</a>
+                    </div>
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar navbar-nav navbar-right">
+                            <li>
+                                <a href="./profile.html">基本資料</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="./plans.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">研究
+                                <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="./researchscope.html">研究領域</a>
+                                    </li>
+                                <li>
+                                    <a href="./plans.html">研究計畫</a>
+                                </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./students.html">指導</a>
+                            </li>
+                            <li>
+                                <a href="./seml.html">課程</a>
+                            </li>
+                        </ul>
+                    </div>
+                      <!-- /.navbar-collapse -->
+                  </div>
+                  <!-- /.container-fluid -->
+              </nav>
+          </div>
+        </div>
+  
+    
+    <div class="container section plan" >
+      <div class="row" >
+        <div class="col-md-12 profile-details">
+          <div class="details-title">
+            <h3><span> 研究計畫 Research Plan </span></h3>
+          </div>
+          <div class="scope-details" id="demoList">
+            <ol class="rectangle-list disabled">
+                <li v-for="plan in plans">
+                  <a href="/#">{{plan.name}}</a>
+                  <ol>擔任職掌 : {{plan.role}} </ol>
+                  <ol>起迄年月 : {{plan.period}} </ol>
+                  <ol>贊助單位 : {{plan.sponsor}}</ol>
+                </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer ">
+      <div class="container section">
+         ©Copyright 2018 Software Engineering and Management Research Center 軟體工程與管理研究中心,all rights reserved.
+         <div class="text-right">
+            <a href="./view/sign_in.html">登入</a>
+         </div>
+
+      </div>
+    </div>
+    
+    
+
+</body>
+<script>
+
+new Vue({
+
+  el: '#demoList',
+
+  data: {
+    currentBranch: 'dev',
+    plans: null
+  },
+
+  created: function () {
+    this.fetchData();
+  },
+
+  methods: {
+    fetchData: function () {
+        var self = this;
+        $.getJSON("/getPlans", function(result){
+          console.log(result);
+          //$("body").html(result);
+          self.plans= result;
+          
+        });
+    },
+
+  }
+});
+
+
+
+
+</script>
+
+
+
+
+</html>
