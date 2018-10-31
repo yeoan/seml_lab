@@ -8,7 +8,7 @@ var QueryGetPlans = function(callback) {
         if (err) throw err;
         else {
 
-            client.query('SELECT * FROM plans order by period desc;')
+            client.query('SELECT * FROM plans order by id desc;')
                 .then(res => {
                     const rows = res.rows;
                     rows.map(row => {

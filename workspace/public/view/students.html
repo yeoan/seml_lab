@@ -8,7 +8,7 @@
       <meta name="csrf-param" content="authenticity_token">
       <meta name="csrf-token" content="QzkU2pYS2f2GqW1w0egoWwx6imEvlSzXVlgJrMYfGTPbM+S9FYgyoVgkUy3uslo207O9Q4ickH3As7P3kWft9g==">
       <link rel="stylesheet" media="all" href="../css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
       <script async="" src="../js/analytics.js"></script>
       <script>
@@ -25,7 +25,7 @@
           })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
           ga('create', 'UA-94092660-1', 'auto');
           ga('send', 'pageview');
-  
+
       </script>
       <script type="text/javascript" src="../js/vue.min.js"></script>
       <script type="text/javascript" src="../js/jquery.js"></script>
@@ -33,7 +33,7 @@
 
 
   </head>
-  
+
   <body>
       <!--header每個頁面都一樣-->
         <div class="main-header">
@@ -79,6 +79,9 @@
                                 <li>
                                     <a href="./plans.html">研究計畫</a>
                                 </li>
+                                <li>
+                                    <a href="./book.html">著作資料</a>
+                                </li>
                                 </ul>
                             </li>
                             <li>
@@ -95,8 +98,8 @@
               </nav>
           </div>
         </div>
-  
-    
+
+
  <div class="container section plan"  id="studentList">
       <div class="row">
     <div class="col-md-12 title-details">
@@ -151,7 +154,7 @@
                       <td>{{student.stati}}</td>
                       <td>  <i class="fa fa-envelope"></i>{{student.email}}</td>
                     </tr>
-        
+
                 </tbody>
               </table>
             </div>
@@ -178,8 +181,8 @@
                       <td>{{student.research_topic}}</td>
                       <td>  <i class="fa fa-envelope"></i>{{student.email}}</td>
                     </tr>
-                  
-                  
+
+
                 </tbody>
               </table>
             </div>
@@ -206,7 +209,7 @@
                       <td>{{student.research_topic}}</td>
                       <td>  <i class="fa fa-envelope"></i> </td>
                     </tr>
-               
+
                 </tbody>
               </table>
             </div>
@@ -245,7 +248,7 @@
               專題生</a>
           </li>
         </ul>
-        
+
         <!--畢業EMBA 內容-->
         <div class="tab-content" style="padding-top:15px;">
             <div id="tab-alumni-emba" class="tab-pane  ">
@@ -259,7 +262,7 @@
                         <th>姓名</th>
                         <th>研究主題</th>
                         <th>聯絡方式</th>
-    
+
                       </tr>
                     </thead>
                     <tbody>
@@ -275,7 +278,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--畢業碩士 內容-->
             <div id="tab-alumni-graduate" class="tab-pane  ">
               <div class="full-height-scroll">
@@ -288,7 +291,7 @@
                         <th>姓名</th>
                         <th>研究主題</th>
                         <th>聯絡方式</th>
-    
+
                       </tr>
                     </thead>
                     <tbody>
@@ -304,7 +307,7 @@
                 </div>
               </div>
             </div>
-            
+
             <!--畢業博士 內容-->
             <div id="tab-alumni-dr" class="tab-pane active ">
               <div class="full-height-scroll">
@@ -331,39 +334,39 @@
                   </table>
                 </div>
               </div>
-    
-    
-    
-    
-    
+
+
+
+
+
         <div class="footer ">
           <div class="container section">
              ©Copyright 2018 Software Engineering and Management Research Center 軟體工程與管理研究中心,all rights reserved.
              <div class="text-right">
                 <a href="/sign_in">登入</a>
              </div>
-    
+
           </div>
         </div>
-        
-        
-    
+
+
+
     </body>
 
     <script type="text/javascript">
         new Vue({
-        
+
           el: '#studentList',
-        
+
           data: {
             currentBranch: 'dev',
             students: null
           },
-        
+
           created: function () {
             this.fetchData();
           },
-        
+
           methods: {
             fetchData: function () {
                 var self = this;
@@ -372,10 +375,10 @@
                   self.students= result;
                 });
             },
-        
+
           }
         });
-    
+
     </script>
 
 

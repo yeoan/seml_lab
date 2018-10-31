@@ -462,7 +462,7 @@ const setUpPlans = function(callback) {
     });
 }
 
-//setUpPlans();
+setUpPlans();
 
 var students=[
   {
@@ -2645,4 +2645,4 @@ const setUpStudents = function(callback) {
     });
 }
 
-setUpStudents();
+//setUpStudents();
