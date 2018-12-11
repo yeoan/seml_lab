@@ -3,6 +3,16 @@ var config = require('../config');
 
 
 var plans = [
+    {
+      "id":45,
+      "name":"敏捷軟體開發核心價值、原則、實務方法與績效間之關連性研究 ",
+      "role":"主持人",
+      "period":"107年8月1日至109年7月31日",
+      "string":null,
+      "sponsor":"科技部專題計畫",
+      "created_at":"2017-10-30T19:33:16.705Z",
+      "updated_at":"1106-10-30T19:33:16.705Z"
+    },
    {
       "id":44,
       "name":"探討跨企業軟體協同開發專案因專業分工影響專案績效之中介與調節效果",
@@ -571,18 +581,6 @@ var students=[
     "email": "",
     "created_at": "2017-10-30 19:46:10.887",
     "updated_at": "2017-10-30 19:46:10.887",
-    "graduated_num": 0
-  },
-  {
-    "id": 10,
-    "name": "賴東祺",
-    "degree": 0,
-    "s_type": 0,
-    "research_topic": "修課與論文研究中",
-    "status": 0,
-    "email": "mailto:donglai@cht.com.tw",
-    "created_at": "2017-10-30 19:42:53.589",
-    "updated_at": "2017-10-30 19:42:53.589",
     "graduated_num": 0
   },
   {
@@ -1644,14 +1642,14 @@ var students=[
   {
     "id": 99,
     "name": "朱靜怡",
-    "degree": 105,
+    "degree": 106,
     "s_type": 2,
     "research_topic": "大數據導入規劃之個案探討",
     "status": 1,
     "email": "",
     "created_at": "2017-08-30 05:40:44.951",
     "updated_at": "2018-02-23 08:38:19.730",
-    "graduated_num": 84
+    "graduated_num": 86
   },
   {
     "id": 100,
@@ -1675,7 +1673,7 @@ var students=[
     "email": "",
     "created_at": "2017-03-15 10:04:47.413",
     "updated_at": "2017-03-15 10:04:59.673",
-    "graduated_num": 86
+    "graduated_num": 84
   },
   {
     "id": 102,
@@ -1728,86 +1726,86 @@ var students=[
   {
     "id": 106,
     "name": "謝宗翰",
-    "degree": 105,
+    "degree": 106,
     "s_type": 2,
-    "research_topic": "修課與論文研究中",
-    "status": 0,
+    "research_topic": "商業智慧導入過程之個案探討",
+    "status": 1,
     "email": "",
     "created_at": "2017-08-30 05:35:09.239",
     "updated_at": "2017-08-30 05:35:20.019",
-    "graduated_num": 0
+    "graduated_num": 97
   },
   {
     "id": 107,
     "name": "楊承達",
-    "degree": 105,
+    "degree": 106,
     "s_type": 2,
-    "research_topic": "修課與論文研究中",
-    "status": 0,
+    "research_topic": "超融合基礎架構下資料庫系統效益評估之研究",
+    "status": 1,
     "email": "",
     "created_at": "2017-08-30 05:40:15.159",
     "updated_at": "2017-08-30 05:41:26.253",
-    "graduated_num": 0
+    "graduated_num": 93
   },
   {
     "id": 108,
     "name": "許梅君",
-    "degree": 105,
+    "degree": 106,
     "s_type": 2,
-    "research_topic": "修課與論文研究中",
-    "status": 0,
+    "research_topic": "遊戲化於金融服務軟體設計要素之探討 —以機器人理財軟體為例",
+    "status": 1,
     "email": "",
     "created_at": "2017-08-30 05:38:32.695",
     "updated_at": "2017-08-30 05:40:54.408",
-    "graduated_num": 0
+    "graduated_num": 96
   },
   {
     "id": 109,
     "name": "吳虹宜",
-    "degree": 105,
+    "degree": 106,
     "s_type": 2,
-    "research_topic": "修課與論文研究中",
-    "status": 0,
+    "research_topic": "商用套裝軟體代理商轉型策略",
+    "status": 1,
     "email": "",
     "created_at": "2017-08-30 05:36:11.498",
     "updated_at": "2017-08-30 05:36:37.271",
-    "graduated_num": 0
+    "graduated_num": 94
   },
   {
     "id": 110,
     "name": "李境豈",
-    "degree": 105,
+    "degree": 106,
     "s_type": 2,
-    "research_topic": "修課與論文研究中",
-    "status": 0,
+    "research_topic": "創新醫療服務之研究-以看診順序演算法為例",
+    "status": 1,
     "email": "",
     "created_at": "2017-08-30 05:37:54.034",
     "updated_at": "2017-08-30 05:38:08.877",
-    "graduated_num": 0
+    "graduated_num": 91
   },
   {
     "id": 111,
     "name": "李書文",
-    "degree": 105,
+    "degree": 106,
     "s_type": 2,
-    "research_topic": "修課與論文研究中",
-    "status": 0,
+    "research_topic": "電子ODM廠跨足醫療資訊系統開發的困境",
+    "status": 1,
     "email": "",
     "created_at": "2017-08-30 05:39:35.198",
     "updated_at": "2017-08-30 05:41:11.495",
-    "graduated_num": 0
+    "graduated_num": 92
   },
   {
     "id": 112,
     "name": "房蓓芬",
-    "degree": 105,
+    "degree": 106,
     "s_type": 2,
-    "research_topic": "修課與論文研究中",
-    "status": 0,
+    "research_topic": "人臉辨識應用於交通支付之可行性研究",
+    "status": 1,
     "email": "",
     "created_at": "2017-08-30 05:39:55.482",
     "updated_at": "2017-08-30 05:41:20.651",
-    "graduated_num": 0
+    "graduated_num": 95
   },
   {
     "id": 113,
@@ -2544,38 +2542,38 @@ var students=[
   {
     "id": 174,
     "name": "范峻豪",
-    "degree": 105,
+    "degree": 106,
     "s_type": 4,
-    "research_topic": "修課與論文研究中",
-    "status": 0,
+    "research_topic": "從計劃行為理論探討LINE使用者點擊詐騙帳號之影響因素",
+    "status": 1,
     "email": "M10509211@mail.ntust.edu.tw",
     "created_at": "2017-03-01 10:46:38.136",
     "updated_at": "2017-03-01 10:46:38.136",
-    "graduated_num": 0
+    "graduated_num": 64
   },
   {
     "id": 175,
     "name": "許家銘",
-    "degree": 105,
+    "degree": 106,
     "s_type": 4,
-    "research_topic": "修課與論文研究中",
-    "status": 0,
+    "research_topic": "行動支付持續使用意圖影響因素之研究",
+    "status": 1,
     "email": "M10509201@mail.ntust.edu.tw",
     "created_at": "2017-03-01 10:45:47.647",
     "updated_at": "2017-03-01 10:53:40.051",
-    "graduated_num": 0
+    "graduated_num": 62
   },
   {
     "id": 176,
     "name": "吳修禎",
-    "degree": 105,
+    "degree": 106,
     "s_type": 4,
-    "research_topic": "修課與論文研究中",
-    "status": 0,
+    "research_topic": "網紅經濟下關鍵字搜尋意圖影響因素之研究",
+    "status": 1,
     "email": "M10509212@mail.ntust.edu.tw",
     "created_at": "2017-03-01 10:46:02.112",
     "updated_at": "2017-03-01 10:55:33.799",
-    "graduated_num": 0
+    "graduated_num": 63
   },
   {
     "id": 177,
@@ -2624,9 +2622,141 @@ var students=[
     "created_at": "2017-08-31 03:29:57.007",
     "updated_at": "2017-08-31 03:30:08.787",
     "graduated_num": 0
+  },
+  {
+    "id": 181,
+    "name": "蔣曜安",
+    "degree": 107,
+    "s_type": 4,
+    "research_topic": "修課與論文研究中",
+    "status": 0,
+    "email": "M10709208@mail.ntust.edu.tw",
+    "created_at": "2017-08-31 03:29:57.007",
+    "updated_at": "2017-08-31 03:30:08.787",
+    "graduated_num": 0
+  },
+  {
+    "id": 182,
+    "name": "江秉叡",
+    "degree": 107,
+    "s_type": 4,
+    "research_topic": "修課與論文研究中",
+    "status": 0,
+    "email": "M10709211@mail.ntust.edu.tw",
+    "created_at": "2017-08-31 03:29:57.007",
+    "updated_at": "2017-08-31 03:30:08.787",
+    "graduated_num": 0
+  },
+  {
+    "id": 183,
+    "name": "黃品瑄",
+    "degree": 107,
+    "s_type": 4,
+    "research_topic": "修課與論文研究中",
+    "status": 0,
+    "email": "M10709209@mail.ntust.edu.tw",
+    "created_at": "2017-08-31 03:29:57.007",
+    "updated_at": "2017-08-31 03:30:08.787",
+    "graduated_num": 0
+  },
+  {
+    "id": 184,
+    "name": "彭德馨",
+    "degree": 107,
+    "s_type": 4,
+    "research_topic": "修課與論文研究中",
+    "status": 0,
+    "email": "M10709213@mail.ntust.edu.tw",
+    "created_at": "2017-08-31 03:29:57.007",
+    "updated_at": "2017-08-31 03:30:08.787",
+    "graduated_num": 0
+  },
+  {
+    "id": 185,
+    "name": "葉承宇",
+    "degree": 107,
+    "s_type": 0,
+    "research_topic": "修課與論文研究中",
+    "status": 0,
+    "email": "",
+    "created_at": "2017-08-31 03:29:57.007",
+    "updated_at": "2017-08-31 03:30:08.787",
+    "graduated_num": 0
+  },
+  {
+    "id": 186,
+    "name": "徐瑋鴻",
+    "degree": 107,
+    "s_type": 2,
+    "research_topic": "修課與論文研究中",
+    "status": 0,
+    "email": "",
+    "created_at": "2017-08-31 03:29:57.007",
+    "updated_at": "2017-08-31 03:30:08.787",
+    "graduated_num": 0
+  },
+  {
+    "id": 187,
+    "name": "范嘉惠",
+    "degree": 107,
+    "s_type": 2,
+    "research_topic": "修課與論文研究中",
+    "status": 0,
+    "email": "",
+    "created_at": "2017-08-31 03:29:57.007",
+    "updated_at": "2017-08-31 03:30:08.787",
+    "graduated_num": 0
+  },
+  {
+    "id": 188,
+    "name": "貴駿騏",
+    "degree": 107,
+    "s_type": 2,
+    "research_topic": "修課與論文研究中",
+    "status": 0,
+    "email": "",
+    "created_at": "2017-08-31 03:29:57.007",
+    "updated_at": "2017-08-31 03:30:08.787",
+    "graduated_num": 0
+  },
+  {
+    "id": 189,
+    "name": "李弘文",
+    "degree": 107,
+    "s_type": 2,
+    "research_topic": "修課與論文研究中",
+    "status": 0,
+    "email": "",
+    "created_at": "2017-08-31 03:29:57.007",
+    "updated_at": "2017-08-31 03:30:08.787",
+    "graduated_num": 0
+  },
+  {
+    "id": 190,
+    "name": "林軒至",
+    "degree": 107,
+    "s_type": 2,
+    "research_topic": "修課與論文研究中",
+    "status": 0,
+    "email": "",
+    "created_at": "2017-08-31 03:29:57.007",
+    "updated_at": "2017-08-31 03:30:08.787",
+    "graduated_num": 0
+  },
+  {
+    "id": 191,
+    "name": "王慶祥",
+    "degree": 107,
+    "s_type": 2,
+    "research_topic": "修課與論文研究中",
+    "status": 0,
+    "email": "",
+    "created_at": "2017-08-31 03:29:57.007",
+    "updated_at": "2017-08-31 03:30:08.787",
+    "graduated_num": 0
   }
-];
 
+];
 const setUpStudents = function(callback) {
     var client = new pg.Client(config.db);
     client.connect(err => {
@@ -2645,4 +2775,4 @@ const setUpStudents = function(callback) {
     });
 }
 
-//setUpStudents();
+setUpStudents();
