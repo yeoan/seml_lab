@@ -1,9 +1,22 @@
 @media only screen and (max-width: 600px) {
-    #content {
-        width: 100%
-    }
+    .my-custom-width{
+           width:450px;
+        }
+      .details-title{
+        margin-left: 0px;
+      }
+      .profile-details{
 
+      }
+.scope-details{
+  margin-left: 0px;
+}
+
+    #planlist {
+      width:250px;
+
+    }
     #studentList {
-        width: 100%
+        width: 400px
     }
 }
