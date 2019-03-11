@@ -1,13 +1,13 @@
 // config.js
 const config = {
     app: {
-        port: 8080
+        port: 80
     },
     db: {
         host: 'localhost',
-        user: 'ubuntu',
-        password: 'ubuntu',
-        dbname: 'ubuntu'
+        user: 'postgres',
+        password:'',
+        dbname: 'postgres'
     }
 };
 

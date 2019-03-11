@@ -472,7 +472,7 @@ const setUpPlans = function(callback) {
     });
 }
 
-setUpPlans();
+//setUpPlans();
 
 var students=[
   {
@@ -2705,7 +2705,7 @@ var students=[
     "email": "",
     "created_at": "2017-08-31 03:29:57.007",
     "updated_at": "2017-08-31 03:30:08.787",
-    "graduated_num": 0
+    "graduated_num": 98
   },
   {
     "id": 188,
@@ -2741,7 +2741,7 @@ var students=[
     "email": "",
     "created_at": "2017-08-31 03:29:57.007",
     "updated_at": "2017-08-31 03:30:08.787",
-    "graduated_num": 0
+    "graduated_num": 99
   },
   {
     "id": 191,
@@ -2753,7 +2753,7 @@ var students=[
     "email": "",
     "created_at": "2017-08-31 03:29:57.007",
     "updated_at": "2017-08-31 03:30:08.787",
-    "graduated_num": 0
+    "graduated_num": 100
   }
 
 ];
